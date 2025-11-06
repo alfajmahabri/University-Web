@@ -1,0 +1,75 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff; 
+  width: 100%;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.linkColumns {
+  display: flex;
+  gap: 4rem;
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.linkColumn a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.linkColumn a:hover {
+  color: #cccccc;
+}
+
+.contactInfo {
+  max-width: 400px;
+}
+
+.contactInfo h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contactInfo p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #cccccc;
+}
+
+.bottomSection {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #cccccc;
+}
+
+.bottomSection p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .topSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .linkColumns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer {
+    padding: 2rem 1rem;
+  }
+}

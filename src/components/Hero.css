@@ -1,0 +1,96 @@
+.hero {
+  padding: 60px 24px;
+  background: #f8f9fa;
+  margin-top: 40px;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.credentials {
+  margin: 3rem 0;
+}
+
+.dte-code {
+  margin-bottom: 1.5rem;
+}
+
+.dte-code h2 {
+  color: #0056b3;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dte-code h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dte-code h4 {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.approval {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature img {
+  width: 48px;
+  height: 48px;
+  opacity: 0.8;
+}
+
+.feature span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .features {
+    gap: 2rem;
+  }
+  
+  .feature img {
+    width: 40px;
+    height: 40px;
+  }
+}

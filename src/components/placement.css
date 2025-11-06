@@ -1,0 +1,157 @@
+.placements {
+	padding: 40px 24px;
+	max-width: 1200px;
+	margin: 0 auto;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	color: #222;
+}
+
+.placements-title {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 12px;
+	font-weight: 700;
+}
+
+.placements-intro {
+	text-align: center;
+	color: #7d7d7d;
+	max-width: 1000px;
+	margin: 0 auto 32px;
+	line-height: 1.6;
+	padding: 0 10px;
+}
+
+/* grid */
+.placements-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+/* card */
+.placement-card {
+	background: #f6f6f6;
+	border-radius: 12px;
+	padding: 18px;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+	border: 1px solid rgba(0,0,0,0.06);
+	overflow: hidden;
+}
+
+.card-inner {
+	display: flex;
+	align-items: center;
+	min-height: 220px;
+}
+
+/* left text block */
+.card-left {
+	flex: 1 1 45%;
+	padding-right: 18px;
+}
+
+.student-name {
+	color: #e53935; /* strong red like screenshot */
+	font-size: 28px;
+	margin: 4px 0 8px;
+	font-weight: 700;
+}
+
+.student-dept,
+.student-degree {
+	color: #111;
+	margin: 6px 0;
+	font-size: 16px;
+}
+
+.ctc-block {
+	margin-top: 18px;
+}
+
+.ctc-amount {
+	display: block;
+	font-size: 40px;
+	font-weight: 800;
+	color: #000;
+}
+
+.ctc-sub {
+	display: block;
+	color: #8c8c8c;
+	margin-top: 6px;
+	font-size: 14px;
+}
+
+/* right visual: rings + portrait */
+.card-right {
+	flex: 1 1 55%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 200px;
+}
+
+/* concentric rings - positioned behind portrait */
+.rings {
+	position: absolute;
+	width: 240px;
+	height: 240px;
+	border-radius: 50%;
+	background:
+		radial-gradient(circle at center, rgba(255,205,130,0.4) 0 40%, transparent 41%),
+		radial-gradient(circle at center, rgba(255,183,0,0.6) 0 24%, transparent 25%),
+		radial-gradient(circle at center, rgba(255,230,185,0.6) 0 70%, transparent 71%);
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+
+/* portrait image overlaps front */
+.portrait {
+	position: relative;
+	width: 170px;
+	height: 170px;
+	object-fit: cover;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+	z-index: 2;
+	right: 18px;
+	transform: translateY(10%);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+	.placements-grid {
+		grid-template-columns: 1fr;
+	}
+	.card-inner {
+		flex-direction: row;
+	}
+	.card-right {
+		min-height: 160px;
+	}
+	.rings {
+		width: 180px;
+		height: 180px;
+		right: 12px;
+	}
+	.portrait {
+		width: 140px;
+		height: 140px;
+	}
+}
+
+@media (max-width: 520px) {
+	.placements {
+		padding: 24px 12px;
+	}
+	.student-name {
+		font-size: 22px;
+	}
+	.ctc-amount {
+		font-size: 32px;
+	}
+}

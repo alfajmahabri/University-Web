@@ -3,24 +3,81 @@
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
+  padding: 0 16px;
+  border-bottom: 1px solid #eee;
 }
 
 .navbar-logo img {
   height: 100px;
 }
 
+/* convert links container to list */
 .navbar-links {
   display: flex;
   align-items: center;
   gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-links a {
+/* each nav item allows a positioned dropdown */
+.nav-item {
+  position: relative;
+  margin: 0;
+}
+
+/* top-level links */
+.nav-link {
   text-decoration: none;
   color: #333;
   font-size: 16px;
+  padding: 12px 8px;
+  display: inline-block;
 }
 
+/* dropdown styles (hidden by default) */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: #fff;
+  min-width: 180px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 6px;
+  padding: 6px 0;
+  z-index: 100;
+}
+
+/* drop items */
+.dropdown li {
+  list-style: none;
+}
+.dropdown a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+.dropdown a:hover {
+  background: rgba(0,86,179,0.06);
+  color: #0056b3;
+}
+
+/* show dropdown on hover or keyboard focus */
+.nav-item:hover > .dropdown,
+.nav-item:focus-within > .dropdown {
+  display: block;
+}
+
+/* CTA alignment */
+.nav-cta {
+  margin-left: 12px;
+}
+
+/* preserve existing .btn style if used elsewhere */
 .btn {
   padding: 8px 16px;
   background-color: #0056b3;
@@ -28,4 +85,23 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/* small screens: make dropdown static under nav item */
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+  .navbar-links {
+    width: 100%;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+  .dropdown {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 12px;
+  }
 }
