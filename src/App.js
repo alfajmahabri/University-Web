@@ -3,7 +3,7 @@ import Navbar from "./components/navbar";
 import Slider from "./components/slider";
 import Program from './components/program';
 import Floatingab from './components/fab';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 import Placement from './components/placement';
 import React, { useState, useEffect } from 'react';
 import Hero from './components/Hero';
