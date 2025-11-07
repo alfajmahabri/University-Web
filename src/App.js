@@ -3,12 +3,12 @@ import Navbar from "./components/navbar";
 import Slider from "./components/slider";
 import Program from './components/program';
 import Floatingab from './components/fab';
-import Footer from './components/Footer'; // Updated to match file case
+import Footer from './components/Footer'; 
 import Placement from './components/placement';
 import React, { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 
-// Import pages
+
 import AboutOverview from './pages/AboutOverview';
 import AboutHistory from './pages/AboutHistory';
 import AboutTeam from './pages/AboutTeam';
@@ -72,6 +72,7 @@ function App() {
     }
 
     // fallback to home for unknown routes
+    //changes
     return <Home />;
   };
 
