@@ -37,4 +37,6 @@ const Footer = () => {
   );
 };
 
+//END
+
 export default Footer;
