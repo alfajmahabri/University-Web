@@ -20,23 +20,23 @@ export default function Hero() {
 
         <div className="features">
           <div className="feature">
-            <img src="/icons/wifi.svg" alt="Internet" />
+            <img src="/icons/wifi.svg" alt="Internet" className="feature-icon" />
             <span>Internet Wifi</span>
           </div>
           <div className="feature">
-            <img src="/icons/hostel.svg" alt="Hostel" />
+            <img src="/icons/hostel.svg" alt="Hostel" className="feature-icon" />
             <span>Hostel</span>
           </div>
           <div className="feature">
-            <img src="/icons/staff.svg" alt="Staff" />
+            <img src="/icons/staff.svg" alt="Staff" className="feature-icon" />
             <span>Qualified Staff</span>
           </div>
           <div className="feature">
-            <img src="/icons/placement.svg" alt="Placement" />
+            <img src="/icons/placement.svg" alt="Placement" className="feature-icon" />
             <span>100% Placement</span>
           </div>
           <div className="feature">
-            <img src="/icons/toppers.svg" alt="Toppers" />
+            <img src="/icons/toppers.svg" alt="Toppers" className="feature-icon" />
             <span>University Toppers</span>
           </div>
         </div>

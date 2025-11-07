@@ -80,6 +80,18 @@
   color: #555;
 }
 
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  fill: #0056b3;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.feature:hover .feature-icon {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;

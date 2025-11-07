@@ -25,17 +25,17 @@ export default function AdmissionsApply() {
 
     setLoading(true);
     try {
-      const res = await fetch('/api/apply', {
+      const res = await fetch('http://localhost:5000/api/apply', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: name.trim(), email: email.trim(), phone: phone.trim() })
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data?.message || 'Server error');
-      setStatus({ type: 'success', message: 'Application submitted. Thank you!' });
+      setStatus({ type: 'success', message: 'Application submitted successfully!' });
       setName(''); setEmail(''); setPhone('');
     } catch (error) {
-      setStatus({ type: 'error', message: error.message || 'Submission failed' });
+      setStatus({ type: 'error', message: error.message || 'Failed to submit application' });
     } finally {
       setLoading(false);
     }
